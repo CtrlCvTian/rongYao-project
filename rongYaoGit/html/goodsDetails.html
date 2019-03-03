@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品下单页面</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css"/>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/commonHeadBot.css">
+	<link rel="stylesheet" href="../css/goodsDetails.css">
+	<link rel="icon" href="http://localhost:8080/images/favicon.ico">
+	<script src = '../js/require.js' async = 'true' defer data-main = '../js/goodsDetails-main'></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="headerBox">
+		<nav class="clear">
+			<ul class="ulLeft clear">
+				<li><a href="http://localhost:8080/html/index.html">首页</a></li>
+				<li><a href="">华为官网</a></li>
+				<li><a href="">荣耀官网</a></li>
+				<li><a href="">花粉俱乐部</a></li>
+				<li><a href="">V码(优先购)</a></li>
+				<li><a href="">企业购</a></li>
+				<li><a href="">Select Regin</a></li>
+			</ul>
+			<ul class="ulRight clear">
+				<li><a href="http://localhost:8080/html/login.html">请登录</a></li>
+				<li><a href="http://localhost:8080/html/regist.html">注册</a></li>
+				<li><a href="http://localhost:8080/html/goodsSettle.html">我的订单</a></li>
+				<li>
+				<div class="t"><a href="">客户服务<i class="iconfont">&#xe847;</a></i></div>
+				<div class="b">
+					<dl>
+						<dt><a href="">帮助中心</a></dt>
+						<dt><a href="">联系客服</a></dt>
+					</dl>
+				</div>
+				</li>
+				<li>
+				<div class="t"><a href="">网站导航<i class="iconfont">&#xe847;</i></a></div>
+				<div class="b clear">
+					<a class="icon" href=""></a>
+					<div class="icon-nav">
+						<a href="">商城首页</a>
+					</div>
+					<dl>
+						<dt>频道</dt>
+						<dd><div class="icon-item"><a href="">华为专区</a></div></dd>
+						<dd><div class="icon-item"><a href="">企业购</a></div></dd>
+						<dd><div class="icon-item"><a href="">荣耀专区</a></div></dd>
+					</dl>
+					<dl>
+						<dt>产品</dt>
+						<dd><div class="icon-item"><a href="">手机</a></div></dd>
+						<dd><div class="icon-item"><a href="">智能家居</a></div></dd>
+						<dd><div class="icon-item"><a href="">平板&笔记本</a></div></dd>
+						<dd><div class="icon-item"><a href="">通用配件</a></div></dd>
+						<dd><div class="icon-item"><a href="">智能穿戴</a></div></dd>
+						<dd><div class="icon-item"><a href="">专属配件</a></div></dd>
+					</dl>
+					<dl>
+						<dt>增值服务</dt>
+						<dd><div class="icon-item"><a href="">以旧换新</a></div></dd>
+						<dd><div class="icon-item"><a href="">礼品包装</a></div></dd>
+						<dd><div class="icon-item"><a href="">补购保障</a></div></dd>
+						<dd><div class="icon-item"><a href="">99元换电池</a></div></dd>
+					</dl>
+					<dl>
+						<dt>会员</dt>
+						<dd><div class="icon-item"><a href="">会员频道</a></div></dd>
+					</dl>
+				</div>
+				</li>
+				<li>
+				<div class="t"><a href="">手机版<i class="iconfont">&#xe847;</i></a></div>
+				<div class="b">
+					<div class="erwei1 clear">
+						<a href=""><img src="../images/erweima1.jpg" alt=""></a>
+						<div>
+							<h2>华为商城APP</h2>
+							<p>新人专享好礼<br>最高5000积分</p>
+							<span></span>
+						</div>
+					</div>
+					<div class="erwei2 clear">
+						<a href=""><img src="../images/erweima2.jpg" alt=""></a>
+						<div>
+							<h2>华为商城公众号</h2>
+							<p>微信扫一扫</p>
+							<span></span>
+						</div>
+					</div>
+					<div class="erwei3 clear">
+						<a href=""><img src="../images/erweima3.jpg" alt=""></a>
+						<div>
+							<h2>微信小程序</h2>
+							<p>微信扫一扫</p>
+							<span style=""></span>
+						</div>
+					</div>
+				</div>
+				</li>
+				<li>
+					<div class="t">
+						<a href="">
+							<i class="iconfont">&#xe6f7;</i>
+							<span id="cart-count">购物车( <span id="cart-totals">0</span> )</span>
+						</a>
+					</div>
+					<!-- 购物车显示 -->
+					<div class="cart-content">
+						<!-- 购物车没有东西时 -->
+						<div class="cart-empty">
+							<p class="cart-pic"><span></span></p>
+							<p class="empty-text">您的购物车是空的，赶紧选购吧~</p>
+						</div>
+						<!-- 购物车内有东西的时候 -->
+						<div class="minicart-list">
+							<ul class="minicart-goods-list"></ul>
+							<div class="minicart-settleup"></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- LOGO -->
+	<div class="navBox">
+		<nav class="clear">
+			<!-- logo -->
+			<div class="logo clear">
+				<a href=""><img src="../images/logo.png" alt="" /></a>
+				<em></em>
+				<a href=""><img src="../images/logo1.png" alt="" /></a>
+			</div>
+			<!-- 商品 -->
+			<ul class="product">
+				<li><a href="">荣耀手机</a></li>
+				<li><a href="">笔记本&平板</a></li>
+				<li><a href="">潮流穿戴</a></li>
+				<li><a href="">智能家居</a></li>
+				<li><a href="">炫彩配件</a></li>
+				<!-- 详细的手机列表 -->
+				<div class="product-details">
+					<div class="product-wraps">
+						<!-- 手机 -->
+						<div class="product-wrap">
+							<div class="product-title clear">
+								<div class="p-t-1">
+									<a href="http://localhost:8080/html/goodsList.html?type=0" class="allPros">全部荣耀手机</a>
+								</div>
+								<div class="p-t-2">
+									<ul class="clear">
+										<li class="series-pro"><a href="" class="series-items">旗舰系列</a></li>
+										<li class="series-pro"><a href="" class="series-items">畅玩系列</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- 商品展示 -->
+							<ul class="prolist clear"></ul>
+						</div>
+						<!-- 笔记本 -->
+						<div class="product-wrap">
+							<div class="product-title clear">
+								<div class="p-t-1">
+									<a href="http://localhost:8080/html/goodsList.html?type=1" class="allPros">全部笔记本&平板</a>
+								</div>
+								<div class="p-t-2">
+									<ul class="clear">
+										<li class="series-pro"><a href="" class="series-items">笔记本电脑</a></li>
+										<li class="series-pro"><a href="" class="series-items">平板</a></li>
+										<li class="series-pro"><a href="" class="series-items">笔记本插件</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- 商品展示 -->
+							<ul class="prolist clear"></ul>
+						</div>
+						<!-- 佩戴 -->
+						<div class="product-wrap">
+							<div class="product-title clear">
+								<div class="p-t-1">
+									<a href="http://localhost:8080/html/goodsList.html?type=2" class="allPros">全部潮流&穿戴</a>
+								</div>
+								<div class="p-t-2">
+									<ul class="clear">
+										<li class="series-pro"><a href="" class="series-items">手表</a></li>
+										<li class="series-pro"><a href="" class="series-items">手环</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- 商品展示 -->
+							<ul class="prolist clear"></ul>
+						</div>
+						<!-- 智能家居 -->
+						<div class="product-wrap">
+							<div class="product-title clear">
+								<div class="p-t-1">
+									<a href="http://localhost:8080/html/goodsList.html?type=3" class="allPros">全部智能家居</a>
+								</div>
+								<div class="p-t-2">
+									<ul class="clear">
+										<li class="series-pro"><a href="" class="series-items">路由器</a></li>
+										<li class="series-pro"><a href="" class="series-items">电力猫/wifi放大器</a></li>
+										<li class="series-pro"><a href="" class="series-items">电视盒子</a></li>
+										<li class="series-pro"><a href="" class="series-items">照明</a></li>
+										<li class="series-pro"><a href="" class="series-items">清洁</a></li>
+										<li class="series-pro"><a href="" class="series-items">节能</a></li>
+										<li class="series-pro"><a href="" class="series-items">环境</a></li>
+										<li class="series-pro"><a href="" class="series-items">安防</a></li>
+										<li class="series-pro"><a href="" class="series-items">健康</a></li>
+										<li class="series-pro"><a href="" class="series-items">厨电</a></li>
+										<li class="series-pro"><a href="" class="series-items">影音</a></li>
+										<li class="series-pro"><a href="" class="series-items">卫浴</a></li>
+										<li class="series-pro"><a href="" class="series-items">出行</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- 商品展示 -->
+							<ul class="prolist clear"></ul>
+						</div>
+						<!-- 炫彩配件 -->
+						<div class="product-wrap">
+							<div class="product-title clear">
+								<div class="p-t-1">
+									<a href="http://localhost:8080/html/goodsList.html?type=4" class="allPros">全部炫彩配件</a>
+								</div>
+								<div class="p-t-2">
+									<ul class="clear">
+										<li class="series-pro"><a href="" class="series-items">贴膜</a></li>
+										<li class="series-pro"><a href="" class="series-items">保护壳</a></li>
+										<li class="series-pro"><a href="" class="series-items">保护套</a></li>
+										<li class="series-pro"><a href="" class="series-items">盒子专属配件</a></li>
+										<li class="series-pro"><a href="" class="series-items">表带</a></li>
+										<li class="series-pro"><a href="" class="series-items">耳机</a></li>
+										<li class="series-pro"><a href="" class="series-items">音箱</a></li>
+										<li class="series-pro"><a href="" class="series-items">电源/充电器/线材</a></li>
+										<li class="series-pro"><a href="" class="series-items">自拍杆/支架</a></li>
+										<li class="series-pro"><a href="" class="series-items">摄像机/镜头</a></li>
+										<li class="series-pro"><a href="" class="series-items">智能硬件</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- 商品展示 -->
+							<ul class="prolist clear"></ul>
+						</div>
+					</div>
+				</div>
+			</ul>
+			<!-- 搜索 -->
+			<form action="" method="">
+				<input type="text" />
+				<input type="submit" value=""/>
+				<!-- 显示在搜索框上的 -->
+				<div class="other">
+					<a href="">荣耀V20</a>
+					<a href="">荣耀Magic2</a>
+				</div>
+			</form>
+		</nav>
+	</div>
+	<!-- 购买界面 -->
+	<div class="buyBox">
+		<main class="clear">
+			<div class="left">
+				<!-- 头部 -->
+				<div class="buy-top">
+					<a href="">首页</a>
+					<span></span>
+					<!-- <p class="classify">手机</p> -->
+				</div>
+				<!-- 放大镜 -->
+				<div class="product-magnify">
+					<!-- 列表 -->
+					<div class="product-listImg">
+						<span class="product-back"></span>
+						<div class="product-Imgs">
+							<ul class="product-listItem clear"></ul>
+						</div>
+						<span class="product-next"></span>
+					</div>
+				</div>
+				<div class="big"></div>
+			</div>
+			<div class="right">
+				<!-- 商品头部 -->
+				<div class="product-meta"></div>
+				<!-- 商品价格促销 -->
+				<div class="product-info">
+					<!-- 价格 -->
+					<div class="product-price clear">
+						<label for="">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格</label>
+					</div>
+					<!-- 促销 -->
+					<div class="product-info-list clear">
+						<label for="">促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销</label>
+						<div class="product-prom">
+							<div class="product-prom-item clear">
+								<em class="tag">商品赠券</em>
+								<div class="product-prom-con">
+									<span>支付后赠价值268元红酒兑换券 </span>
+								</div>
+							</div>
+						</div>
+						<div class="product-prom-integral">
+							<div class="product-prom-item clear">
+								<em class="tag">赠送积分</em>
+								<div class="product-prom-con">
+									<span>购买即赠商城积分，积分可抵现~</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 选择不同的类型 -->
+				<div class="pro-skus">
+					<!-- 选择颜色 -->
+					<dl class="product-choose clear">
+						<label for="">选择颜色</label>
+						<div class="product-choose-detail">
+							<ul class="pro-color clear"></ul>
+						</div>
+					</dl>
+					<!-- 选择大小 -->
+					<dl class="product-choose clear">
+						<label for="">选择版本</label>
+						<div class="product-choose-detail">
+							<ul class="pro-size clear"></ul>
+						</div>
+					</dl>
+				</div>
+				<!-- 加入购物车部分 -->
+				<div class="product-operation-main">
+					<!-- 已选择的部分 -->
+					<div class="product-description clear">
+						<label for="">已选择商品:</label>
+						<div id="pro-select-sku" class="product-selected"></div>
+					</div>
+					<!-- 进行选择 -->
+					<div class="product-operation clear">
+						<div class="product-stock clear">
+							<input type="text" id="pro-quantity" class="product-stock-text" value="1" placeholder="1">
+							<p class="product-stock-btn clear">
+								<span class="stock-plus">+</span>
+								<span class="stock-minus">-</span>
+							</p>
+						</div>
+						<!-- 加入购物车 -->
+						<div id="pro-operation" class="product-button"></div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- 购物车图标 -->
+	<div class="shop-cart">
+		<a href="http://localhost:8080/html/goodsSettle.html" class="s-cart"><span id="cart-total">0</span></a>
+	</div>
+	<!-- 移动的小球 -->
+	<div id="ball"></div>
+	<!-- 底部 -->
+	<div class="bottomBox">
+		<main>
+			<!-- 头部列表 -->
+			<nav>
+				<ul class="clear">
+					<li><a href=""><i></i>百强企业 品质保证</a></li>
+					<li><a href=""><i></i>7天退货 15天换货</a></li>
+					<li><a href=""><i></i>48元起免运费</a></li>
+					<li><a href=""><i></i>1000家维修网点 全国联保</a></li>
+				</ul>
+			</nav>
+			<!-- 服务内容 -->
+			<div class="service clear">
+				<!-- 列表部分 -->
+				<div class="f1 clear">
+					<div class="s1">
+						<dt><p class="title">购物部分</p></dt>
+						<dd>
+							<ol>
+								<li><a href="">购物指南</a></li>
+								<li><a href="">配送方式</a></li>
+								<li><a href="">支付方式</a></li>
+								<li><a href="">常见问题</a></li>
+							</ol>
+						</dd>
+					</div>
+					<div class="s2">
+						<dt><p class="title">保修与退换货</p></dt>
+						<dd>
+							<ol>
+								<li><a href="">保修政策</a></li>
+								<li><a href="">退换货政策</a></li>
+								<li><a href="">退换货流程</a></li>
+								<li><a href="">保修状态查询</a></li>
+								<li><a href="">配件防伪查询</a></li>
+							</ol>
+						</dd>
+					</div>
+					<div class="s3">
+						<dt><p class="title">维修技术支持</p></dt>
+						<dd>
+							<ol>
+								<li><a href="">售后网点</a></li>
+								<li><a href="">预约维修</a></li>
+								<li><a href="">手机寄修</a></li>
+								<li><a href="">备件价格查询</a></li>
+								<li><a href="">上门服务</a></li>
+							</ol>
+						</dd>
+					</div>
+					<div class="s4">
+						<dt><p class="title">特色服务</p></dt>
+						<dd>
+							<ol>
+								<li><a href="">防伪查询</a></li>
+								<li><a href="">补购保障</a></li>
+								<li><a href="">以旧换新</a></li>
+								<li><a href="">礼品包装</a></li>
+							</ol>
+						</dd>
+					</div>
+					<div class="s5">
+						<dt><p class="title">关于我们</p></dt>
+						<dd>
+							<ol>
+								<li><a href="">公司介绍</a></li>
+								<li><a href="">华为商城介绍</a></li>
+								<li><a href="">华为线下门店</a></li>
+								<li><a href="">荣耀线下门店</a></li>
+								<li><a href="">诚征英才</a></li>
+								<li><a href="">意见反馈</a></li>
+							</ol>
+						</dd>
+					</div>
+					<div class="s6">
+						<dt><p class="title">关于我们</p></dt>
+						<dd>
+							<ol>
+								<li><a href="">友情链接</a></li>
+								<li><a href="">华为集团</a></li>
+								<li><a href="">华为CBG官网</a></li>
+								<li><a href="">荣耀官网</a></li>
+								<li><a href="">花粉俱乐部</a></li>
+								<li><a href="">网站地图</a></li>
+							</ol>
+						</dd>
+					</div>
+				</div>
+				<!-- 右边电话部分 -->
+				<div class="f1-r">
+					<dl>
+						<dt><p>400-088-6888</p></dt>
+						<dd>7x24小时客服热线（仅收市话费）</dd>
+						<dd><a id="online" href=""><i></i>在线客服</a></dd>
+					</dl>
+					<div class="Vmall clear">
+						<p>关注Vmall：</p>
+						<ul>
+							<li class="weixin">
+								<a href=""></a>
+								<div class="wei-pic">
+									<img src="../images/erweima2.jpg" alt="">
+								</div>
+							</li>
+							<li class="toutiao"><a href=""></a></li>
+							<li class="weibo"><a href=""></a></li>
+							<li class="huawei"><a href=""></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- 底部 华为介绍等 -->
+	<div class="footerBox">
+		<main>
+			<div class="footer-content clear">
+				<p class="footer-logo"><a href=""><img src="../images/footer-logo.png" alt=""></a></p>
+				<div class="group">
+					<ul class="clear">
+						<li><a href="">华为集团</a></li>
+						<li><a href="">华为CBG官网</a></li>
+						<li><a href="">荣耀官网</a></li>
+						<li><a href="">花粉俱乐部</a></li>
+						<li><a href="">华为应用市场</a></li>
+						<li><a href="">EMUI</a></li>
+						<li><a href="">华为终端云空间</a></li>
+						<li><a href="">开发者联盟</a></li>
+						<li><a href="">华为商城手机版</a></li>
+						<li class="last"><a href="">网站地图</a></li>
+					</ul>
+					<a href="https://www.vmall.com/help/faq-2635.html" target="_blank" title="隐私声明" rel="nofollow">隐私声明</a><a href="https://www.vmall.com/help/faq-778.html" target="_blank" title="服务协议" rel="nofollow"> 服务协议</a> <a href="https://www.vmall.com/help/faq-11810.html" target="_blank" title="COOKIES" rel="nofollow"> COOKIES</a> Copyright &copy; 2012-2019 华为软件技术有限公司 版权所有 保留一切权利<br />
+					公安备案 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011402010009" target="_blank" rel="nofollow">苏公网安备32011402010009号</a><em> | </em><a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow">苏ICP备17040376号-6</a><br />增值电信业务经营许可证：苏B2-20130048号<em>| </em><a href="http://sq.ccm.gov.cn/ccnt/sczr/service/business/emark/toDetail/2E50AF12E8B14A8B9721D1548FC0CDD2" target="_blank">网络文化经营许可证：苏网文[2015] 1599-026号</a><br />
+				</div>
+				<p class="footer-right">
+					<a href=""><img src="../images/footer-right.jpg" alt=""></a>
+					<a href=""><img src="../images/footer-right1.png" alt=""></a>
+				</p>
+			</div>		
+		</main>
+	</div>
+</body>
+</html>

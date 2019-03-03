@@ -1,0 +1,273 @@
+@charset "UTF-8";
+a[class^="item"] {
+  position: relative;
+  float: left; }
+
+.item2, .item3 {
+  margin-left: 12px;
+  margin-bottom: 13px; }
+
+.p-text {
+  position: absolute;
+  left: 28px;
+  top: 18px;
+  color: #fff; }
+
+.item2 .p-text,
+.item3 .p-text {
+  color: black; }
+
+/*最后两个的大手机字体样式*/
+.partsBox main article .item1 .p-text,
+.houseBox main article .item1 .p-text {
+  color: black; }
+
+.partsBox main article .item1 .p-text .price,
+.houseBox main article .item1 .p-text .price {
+  color: #4ac8f1; }
+
+/* 头部共同样式 */
+.bar {
+  width: 24px;
+  height: 2px;
+  background: #990000; }
+
+header {
+  position: relative;
+  margin-bottom: 25px; }
+
+header h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: normal; }
+
+header ul {
+  text-align: center;
+  margin-top: 20px;
+  height: 26px;
+  line-height: 26px; }
+
+header ul li {
+  display: inline-block; }
+
+header ul li a {
+  color: #717171;
+  margin: 0 10px;
+  font-size: 14px; }
+
+header ul li a:hover {
+  color: #990000; }
+
+header aside {
+  margin-top: 15px;
+  text-align: center;
+  position: relative; }
+
+header aside a {
+  color: #717171;
+  font-size: 14px; }
+
+header aside a {
+  margin-right: 25px; }
+
+header .more {
+  display: block;
+  float: right;
+  width: 65px;
+  height: 25px;
+  border: 1px solid #717171;
+  color: #717171;
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: right;
+  line-height: 25px;
+  position: absolute;
+  right: 0;
+  top: 50px; }
+
+header .more i {
+  font-size: 2px;
+  margin: 0 5px 0 10px; }
+
+header .more:hover {
+  color: #990000;
+  border-color: #990000; }
+
+.series {
+  margin-bottom: 25px; }
+
+/* 大手机共同样式 */
+.phone-name {
+  font-size: 18px;
+  margin-top: 16px; }
+
+.character {
+  font-size: 14px;
+  margin-top: 14px; }
+
+.price {
+  font-size: 14px;
+  margin-top: 23px;
+  font-size: 18px;
+  font-weight: 500; }
+
+.item2 .price,
+.item3 .price {
+  color: #4ac8f1; }
+
+/* 小手机列表 */
+.drag-pic {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 36px auto 0; }
+
+.drag-pic img {
+  width: 100%;
+  height: 100%; }
+
+.drag-phoneName {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 14px 20px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: nowrap;
+  color: #3a3a3a;
+  line-height: 24px; }
+
+.drag-nature {
+  font-size: 12px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  color: #a4a4a4;
+  margin: 0 20px 0;
+  line-height: 18px; }
+
+.drag-price {
+  font-size: 14px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 3px 20px 0;
+  line-height: 40px;
+  color: #00b5e2;
+  text-align: center; }
+
+.cross {
+  height: 5px;
+  width: 25px;
+  margin: 0 auto;
+  background-color: #990000; }
+
+/*底部  头部 列表图片*/
+.footerBox main nav ul li a i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  background: url(../images/icon-header.png) no-repeat; }
+
+/*竖杠*/
+.shortcut {
+  content: "";
+  width: 1px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background: #d3d3d3; }
+
+/*商品详细下拉展示*/
+.product-details {
+  z-index: 300;
+  position: absolute;
+  left: 0;
+  top: 76px;
+  width: 100%;
+  background: #fff;
+  height: 280px;
+  border-top: 1px solid #ebebeb;
+  display: none; }
+
+.product-wraps {
+  width: 1200px;
+  margin: 0 auto;
+  height: 280px; }
+
+.product-wrap {
+  /*overflow: hidden;*/
+  background: #fff;
+  width: 1200px;
+  position: absolute;
+  top: 0px;
+  /*display: none;*/
+  height: 280px; }
+
+.p-t-1 {
+  padding-right: 22px;
+  background: url(../images/product-icon.jpg) no-repeat 110px 23px;
+  float: left;
+  padding-top: 17px; }
+
+.allPros {
+  color: black; }
+
+.p-t-2 {
+  float: left;
+  margin-left: 30px;
+  float: left;
+  padding-top: 17px; }
+
+.series-pro {
+  float: left;
+  margin-right: 30px; }
+
+.p-t-2 ul li a {
+  color: #717171;
+  font-size: 14px; }
+
+.series-items {
+  color: #717171;
+  font-size: 14px; }
+
+/*商品图片的展示*/
+.prolist {
+  padding-left: 27px; }
+
+.pro-items {
+  float: left;
+  margin-right: 45px; }
+
+.thumb {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+
+.pro-pic {
+  width: 120px;
+  height: 120px;
+  margin: 23px auto 0; }
+
+.pro-pic img {
+  height: 100%;
+  width: 100%; }
+
+.pro-title {
+  color: black;
+  margin-top: 25px;
+  font-size: 14px;
+  width: 120px; }
+
+.pro-price {
+  color: #ca141d;
+  font-size: 12px;
+  margin: 7px 0 10px 0; }

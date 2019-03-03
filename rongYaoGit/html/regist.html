@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/regist.css">
+	<link rel="stylesheet" href="../iconfont2/iconfont.css">
+	<link rel="icon" href="../images/favicon.ico">
+	<script src = '../js/require.js' async = 'true' defer data-main = '../js/regist-main'></script>
+</head>
+<body>
+	<div class="headerBox">
+		<main>
+			<!-- 头部 -->
+			<div class="header-logo clear">
+				<!-- LOGO -->
+				<div class="main-logo">
+					<img src="../images/head-top.png" alt="">
+				</div>
+				<div class="websiteName clear">
+					<b>|</b>
+					<b>华为商城</b>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- 注册界面 -->
+	<div class="registBox">
+		<div class="regist-cotent clear" id="registForm">
+			<div class="reg-tab clear">
+				<a class="phone-wrap" blo="current"><i class="iconfont">&#xe608;</i><span id="tabPhone" class="tab-phone">手机号</span></a>
+				<a class="mail-wrap"><i class="iconfont">&#xe604;</i><span id="tabMail" class="tab-email">电子邮箱</span></a>
+				<!-- 直接登录 -->
+				<div class="loginExit">已有华为账号
+					<a href="http://10.30.153.74/dist/html/login.html">登录</a>
+					<span class="ar-eg-opposite">></span>
+				</div>
+			</div>
+			<!-- 注册详细界面 -->
+			<div class="reg-details">
+				<!-- 手机注册 -->
+				<div class="reg-detail" style="display: block;">
+					<!-- 手机号 -->
+					<div class="input-container clear" id="phoneInputDiv-box">
+						<div class="l inputLeft">
+							<div id="input_language" class="ddrop-EMU5">
+								<span class="select-text">+86(中国)</span>
+								<div class="select-ico"><i class="iconfont">&#xe682;</i></div>
+							</div>
+						</div>
+						<div class="r input-right"></div>
+						<div class="input-content">
+							<input type="text" class="text input-number" id="phone" placeholder="请输入手机号" autocomplete="off">
+						</div>
+					</div>
+					<p id="phoneTitle" class="hint">手机号不正确</p>
+					<!-- 密码 -->
+					<div class="input-container clear" id="phoneInputDiv-box">
+						<div class="l inputLeft">
+							<div id="input_language" class="ddrop-EMU5">
+								<span class="select-text">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码
+							</span>
+							</div>
+						</div>
+						<div class="r input-right"></div>
+						<div class="input-content">
+							<input type="password" class="password input-number" id="password" placeholder="请输入密码" autocomplete="off">
+						</div>
+					</div>
+					<p id="pwdTitle" class="hint">至少包含8个字符</p>
+					<!-- 确认密码 -->
+					<div class="input-container clear" id="phoneInputDiv-box">
+						<div class="l inputLeft">
+							<div id="input_language" class="ddrop-EMU5">
+								<span class="select-text">确&nbsp;&nbsp;&nbsp;认&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;码
+							</span>
+							</div>
+						</div>
+						<div class="r input-right"></div>
+						<div class="input-content">
+							<input type="password" class="password input-number" id="confirmPwd" placeholder="请再次输入密码" autocomplete="off">
+						</div>
+					</div>
+					<p id="conTitle" class="hint">密码与确认密码不一致</p>
+					<!-- 邮件地址 -->
+					<div class="input-container clear" id="phoneInputDiv-box">
+						<div class="l inputLeft">
+							<div id="input_language" class="ddrop-EMU5">
+								<span class="select-text">邮&nbsp;&nbsp;&nbsp;件&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;&nbsp;址</span>
+							</div>
+						</div>
+						<div class="r input-right"></div>
+						<div class="input-content">
+							<input type="text" class="text input-number" id="email" placeholder="请输入邮件地址" autocomplete="off">
+						</div>
+					</div>
+					<p id="emailTitle" class="hint">对不起，您输入的电子邮箱错误</p>
+					<!-- 注册 -->
+					<div class="reg-btn">
+						<input type="button" value="注册" class="btn btn-reg" id="btnSubmit">
+					</div>
+				</div>
+				<!-- 邮箱注册 -->
+				<div class="reg-detail">
+					<!-- 邮件地址 -->
+					<div class="input-container clear" id="phoneInputDiv-box">
+						<div class="l inputLeft">
+							<div id="input_language" class="ddrop-EMU5">
+								<span class="select-text">邮&nbsp;&nbsp;&nbsp;件&nbsp;&nbsp;&nbsp;地&nbsp;&nbsp;&nbsp;址</span>
+							</div>
+						</div>
+						<div class="r input-right"></div>
+						<div class="input-content">
+							<input type="text" class="text input-number" id="email" placeholder="请输入邮件地址">
+						</div>
+					</div>
+					<!-- 密码 -->
+					<div class="input-container clear" id="phoneInputDiv-box">
+						<div class="l inputLeft">
+							<div id="input_language" class="ddrop-EMU5">
+								<span class="select-text">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码
+							</span>
+							</div>
+						</div>
+						<div class="r input-right"></div>
+						<div class="input-content">
+							<input type="text" class="password input-number" id="password" placeholder="请输入密码">
+						</div>
+					</div>
+					<p id="pwdTitle" class="hint">至少包含8个字符</p>
+					<!-- 确认密码 -->
+					<div class="input-container clear" id="phoneInputDiv-box">
+						<div class="l inputLeft">
+							<div id="input_language" class="ddrop-EMU5">
+								<span class="select-text">确&nbsp;&nbsp;&nbsp;认&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;码
+							</span>
+							</div>
+						</div>
+						<div class="r input-right"></div>
+						<div class="input-content">
+							<input type="text" class="password input-number" id="confirmPwd" placeholder="请再次输入密码">
+						</div>
+					</div>
+					<p id="conTitle" class="hint">密码与确认密码不一致</p>
+					<!-- 手机号 -->
+					<div class="input-container clear" id="phoneInputDiv-box">
+						<div class="l inputLeft">
+							<div id="input_language" class="ddrop-EMU5">
+								<span class="select-text">+86(中国)</span>
+								<div class="select-ico"><i class="iconfont">&#xe682;</i></div>
+							</div>
+						</div>
+						<div class="r input-right"></div>
+						<div class="input-content">
+							<input type="text" class="text input-number" id="phone" placeholder="请输入手机号">
+						</div>
+					</div>
+					<p id="phoneTitle" class="hint">手机号不正确</p>
+					<!-- 注册 -->
+					<div class="reg-btn">
+						<input type="button" value="注册" class="btn btn-reg" id="btnSubmit">
+					</div>
+				</div>
+			</div>
+			<!-- 边框 -->
+			<div class="box-shadow"></div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div class="footerBox">
+		<main>
+			<div class="reg-content">
+				<p class="footer">
+					<a href="">华为用户协议</a>
+					<em>|</em>
+					<a href="">关于华为帐号与隐私的声明</a>
+					<em>|</em>
+					<a href="">常见问题</a>
+				</p>
+				<p class="copyrightPart">Copyright&nbsp;©&nbsp;2011-2018&nbsp;&nbsp;华为软件技术有限公司  版权所有&nbsp;&nbsp;保留一切权利&nbsp;&nbsp;苏B2-20070200号&nbsp;|&nbsp;苏ICP备09062682号-9</p>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
